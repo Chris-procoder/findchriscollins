@@ -149,4 +149,38 @@ footer {
   .container { padding: 1rem; }
   .intro { flex-direction: column; gap: 1rem; text-align: center; }
   .qr-contact { flex-direction: column; gap: 1.5rem; }
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+#full-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#title {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+#bio {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  color: #444;
 }
