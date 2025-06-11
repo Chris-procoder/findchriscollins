@@ -20,7 +20,21 @@ body {
   --text: #222;
   --card-bg: #fff;
   --shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+:root {
+  --text-dark: #222;
+  --text-light: #f1f1f1;
 }
+
+#full-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+body.dark #full-name {
+  color: var(--text-light);
+}
+
 
 /* Dark Mode */
 body.dark {
