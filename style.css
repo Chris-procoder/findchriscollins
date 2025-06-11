@@ -61,18 +61,19 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  padding: 0.5rem 0;
 }
 
 /* Profile Section */
 .profile-container {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .profile-pic {
-  width: 80px;  /* Reduced size */
-  height: 80px;
+  width: 60px;  /* Reduced from 80px */
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--secondary);
@@ -81,8 +82,8 @@ header {
 /* Responsive Profile Pic */
 @media (max-width: 700px) {
   .profile-pic {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -91,19 +92,19 @@ header {
 }
 
 #full-name {
-  font-size: 1.8rem;
+  font-size: 1.4rem;  /* Smaller than 1.8rem */
   font-weight: bold;
   color: var(--text);
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 #title {
-  font-size: 1.2rem;
+  font-size: 1rem;  /* Reduced */
   color: #666;
 }
 
 #bio {
-  font-size: 1rem;
+  font-size: 0.9rem;  /* Reduced */
   color: #444;
 }
 
@@ -116,7 +117,7 @@ header {
 
 .social-icons a {
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.5rem; /* Reduced from 2rem */
   transition: transform 0.2s, color 0.3s;
 }
 
