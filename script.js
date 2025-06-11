@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Profile picture zoom modal
+  // Profile Picture Zoom Modal
   const picLink = document.getElementById('profile-pic-link');
   const modal = document.getElementById('pic-modal');
   const modalImg = document.getElementById('modal-img');
@@ -22,30 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // QR Code generation
+  // QR Code Generation
   const qrEl = document.getElementById('qrcode');
   if (qrEl && window.QRCode) {
     new QRCode(qrEl, {
       text: window.location.href,
-      width: 120,
-      height: 120,
+      width: 100, // Slightly reduced for better display
+      height: 100,
       colorDark: '#222',
       colorLight: '#fff',
       correctLevel: QRCode.CorrectLevel.H,
     });
   }
 
-  // Light/Dark mode toggle
+  // Light/Dark Mode Toggle
   const themeToggle = document.getElementById('theme-toggle');
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      themeToggle.querySelector('i').classList.toggle('fa-moon');
-      themeToggle.querySelector('i').classList.toggle('fa-sun');
+      const icon = themeToggle.querySelector('i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
     });
   }
 
-  // Contact form validation
+  // Contact Form Validation & Submission Feedback
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -67,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Allow form submission
+      // Allow Form Submission
       msgEl.textContent = 'Sending...';
       msgEl.style.color = 'gray';
     });
   }
 
-  // Section fade-in animation on scroll
+  // Smooth Fade-In Animation for Sections
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
