@@ -69,14 +69,21 @@ header {
   align-items: center;
   gap: 1.5rem;
 }
-
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--secondary);
+  border: 2px solid var(--secondary);
 }
+
+@media (max-width: 700px) {
+  .profile-pic {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 
 .profile-text {
   flex: 1;
