@@ -14,7 +14,6 @@
         <a href="#" id="profile-pic-link">
           <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
         </a>
-        <!-- Modal for zoomed profile pic -->
         <div id="pic-modal" class="modal">
           <span class="modal-close" id="modal-close">&times;</span>
           <img class="modal-content" id="modal-img" src="profile.jpg" alt="Full Profile Photo" />
@@ -55,6 +54,22 @@
       </div>
     </section>
 
+    <section class="certificates container">
+      <h3>Certificates</h3>
+      <ul class="cert-list">
+        <li>
+          <a href="https://www.netacad.com/" target="_blank">
+            <i class="fas fa-certificate"></i> Cisco Certification
+          </a>
+        </li>
+        <li>
+          <a href="https://forager.ai/" target="_blank">
+            <i class="fas fa-certificate"></i> Forager Certification
+          </a>
+        </li>
+      </ul>
+    </section>
+
     <section class="social container">
       <h3>Find Me Online</h3>
       <div class="social-icons">
@@ -62,6 +77,17 @@
         <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
         <a href="#" title="Portfolio" target="_blank"><i class="fas fa-globe"></i></a>
       </div>
+    </section>
+
+    <section class="contact-form container">
+      <h3>Contact Me</h3>
+      <form id="contactForm" action="https://formspree.io/f/xzzgrder" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="form-msg"></p>
+      </form>
     </section>
   </main>
 
