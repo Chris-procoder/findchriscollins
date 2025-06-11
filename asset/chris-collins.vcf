@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Collins;Chris;B.;;
+FN:Chris B. Collins
+TITLE:Professional Title
+EMAIL;TYPE=INTERNET:personal@email.com
+EMAIL;TYPE=INTERNET:school@email.edu
+TEL;TYPE=CELL:+1234567890
+URL:https://linkedin.com/in/yourusername
+URL:https://yourportfolio.com
+END:VCARD
