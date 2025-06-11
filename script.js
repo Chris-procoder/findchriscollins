@@ -1,60 +1,59 @@
-// QR Code generation
-window.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   // Profile picture zoom modal
   const picLink = document.getElementById('profile-pic-link');
   const modal = document.getElementById('pic-modal');
   const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');
+
   if (picLink && modal && modalImg && modalClose) {
-    picLink.addEventListener('click', function(e) {
+    picLink.addEventListener('click', (e) => {
       e.preventDefault();
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     });
-    modalClose.addEventListener('click', function() {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    });
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-      }
+
+    [modalClose, modal].forEach(element => {
+      element.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === modalClose) {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+        }
+      });
     });
   }
 
-  // Generate QR code to current site or custom URL
+  // QR Code generation
   const qrEl = document.getElementById('qrcode');
   if (qrEl && window.QRCode) {
-    let url = window.location.href;
     new QRCode(qrEl, {
-      text: url,
+      text: window.location.href,
       width: 120,
       height: 120,
       colorDark: '#222',
       colorLight: '#fff',
-      correctLevel: QRCode.CorrectLevel.H
+      correctLevel: QRCode.CorrectLevel.H,
     });
   }
 
   // Light/Dark mode toggle
   const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    // Change icon
-    const icon = themeToggle.querySelector('i');
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      themeToggle.querySelector('i').classList.toggle('fa-moon');
+      themeToggle.querySelector('i').classList.toggle('fa-sun');
+    });
+  }
 
-  // Contact form validation (only show message, do not block real submission)
+  // Contact form validation
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', function(e) {
-      let name = form.name.value.trim();
-      let email = form.email.value.trim();
-      let msg = form.message.value.trim();
-      let msgEl = document.getElementById('form-msg');
+    form.addEventListener('submit', (e) => {
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const msg = form.message.value.trim();
+      const msgEl = document.getElementById('form-msg');
+
       if (!name || !email || !msg) {
         e.preventDefault();
         msgEl.textContent = 'Please fill out all fields.';
@@ -67,20 +66,22 @@ window.addEventListener('DOMContentLoaded', function() {
         msgEl.style.color = 'crimson';
         return;
       }
-      // Allow real submission to Formspree
+
+      // Allow form submission
       msgEl.textContent = 'Sending...';
       msgEl.style.color = 'gray';
     });
   }
 
-  // Optional: Scroll animation on section reveal
+  // Section fade-in animation on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.18 });
+  }, { threshold: 0.2 });
+
   document.querySelectorAll('main section').forEach(sec => {
     sec.classList.add('invisible');
     observer.observe(sec);
