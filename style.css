@@ -69,21 +69,22 @@ header {
   align-items: center;
   gap: 1.5rem;
 }
+
 .profile-pic {
-  width: 90px;
-  height: 90px;
+  width: 80px;  /* Reduced size */
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--secondary);
 }
 
+/* Responsive Profile Pic */
 @media (max-width: 700px) {
   .profile-pic {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 }
-
 
 .profile-text {
   flex: 1;
@@ -210,11 +211,6 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
   }
 
   .social-icons {
