@@ -11,16 +11,20 @@
 <body>
   <header>
     <div class="container intro">
-      <a href="#" id="profile-pic-link"><img src="background-1.jpg" alt="Profile Photo" class="profile-pic" /></a>
-<!-- Modal for zoomed profile pic -->
-<div id="pic-modal" class="modal">
-  <span class="modal-close" id="modal-close">&times;</span>
-  <img class="modal-content" id="modal-img" src="asset/background-1.jpg" alt="Full Profile Photo" />
-</div>
-      <div>
-        <h1 id="full-name">Your Name</h1>
-        <h2 id="title">Professional Title</h2>
-        <p id="bio">Short bio about who you are and what you do. Passionate about ...</p>
+      <div class="profile-container">
+        <a href="#" id="profile-pic-link">
+          <img src="background-1.jpg" alt="Profile Photo" class="profile-pic" />
+        </a>
+        <!-- Modal for zoomed profile pic -->
+        <div id="pic-modal" class="modal">
+          <span class="modal-close" id="modal-close">&times;</span>
+          <img class="modal-content" id="modal-img" src="asset/background-1.jpg" alt="Full Profile Photo" />
+        </div>
+        <div class="profile-text">
+          <h1 id="full-name"><strong>CHRIS B. COLLINS</strong></h1>
+          <h2 id="title">Professional Title</h2>
+          <p id="bio">Short bio about who you are and what you do. Passionate about ...</p>
+        </div>
       </div>
       <button id="theme-toggle" aria-label="Toggle light/dark mode"><i class="fa fa-moon"></i></button>
     </div>
@@ -109,7 +113,7 @@
 
   <footer>
     <div class="container">
-      &copy; 2025 Chris B. Collins All rights reserved.
+      &copy; 2025 Chris B. Collins. All rights reserved.
     </div>
   </footer>
 
