@@ -105,7 +105,7 @@ header {
 
 /* Profile Zoom Modal */
 #pic-modal {
-  display: none;
+  display: none; /* Hides the modal initially */
   position: fixed;
   z-index: 1000;
   left: 0;
