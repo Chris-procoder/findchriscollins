@@ -103,9 +103,8 @@ header {
   color: #444;
 }
 
-/* Profile Zoom Modal */
 #pic-modal {
-  display: none; /* Hides the modal initially */
+  display: none; /* Hide modal initially */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -114,10 +113,13 @@ header {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.85);
+  
+  /* Flexbox to center content */
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
 
 #pic-modal img {
   display: block;
