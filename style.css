@@ -201,10 +201,13 @@ header {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+:root {
+  --primary: #0077b6;
+  --secondary: #023e8a;
 }
 
 .resume-download {
-  margin-top: 1.5rem;
+  margin-top: 2rem; /* Slightly more space for better separation */
   text-align: center;
 }
 
@@ -217,11 +220,13 @@ header {
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease;
+  font-size: 1rem;
 }
 
 .resume-btn:hover {
   background: var(--secondary);
 }
+
 
 /* Contact Form */
 .contact-form form {
